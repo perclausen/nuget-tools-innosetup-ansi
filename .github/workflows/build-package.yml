@@ -3,13 +3,15 @@ name: Build NuGet package
 env:
   INNO_VERSION: 5.6.1
 
-on:
-  workflow_dispatch:
-    inputs:
-      publishnuget:
-        description: 'Publish NuGet?'
-        required: true
-        default: false
+on: [push, pull_request]
+
+#on:
+#  workflow_dispatch:
+#    inputs:
+#      publishnuget:
+#        description: 'Publish NuGet?'
+#        required: true
+#        default: false
 
 jobs:
   build:
@@ -41,7 +43,7 @@ jobs:
 
   publish:
     name: Publish release to NuGet
-    if: ${{ github.event.inputs.publishnuget }}
+#    if: ${{ github.event.inputs.publishnuget }}
     runs-on: windows-latest
     needs: build
     steps:
