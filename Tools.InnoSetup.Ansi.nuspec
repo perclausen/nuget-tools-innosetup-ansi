@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Tools.InnoSetup.Ansi</id>
-        <version>5.6.1-rc1</version>
+        <version>5.6.1-rc2</version>
         <title>Ansi Inno Setup tools</title>
         <authors>Per Clausen, Jordan Russell</authors>
         <license type="file">license.txt</license>

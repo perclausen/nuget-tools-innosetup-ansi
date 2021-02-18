@@ -5,14 +5,6 @@ env:
 
 on: [push, pull_request]
 
-#on:
-#  workflow_dispatch:
-#    inputs:
-#      publishnuget:
-#        description: 'Publish NuGet?'
-#        required: true
-#        default: false
-
 jobs:
   build:
     name: Build package
@@ -43,7 +35,6 @@ jobs:
 
   publish:
     name: Publish release to NuGet
-#    if: ${{ github.event.inputs.publishnuget }}
     runs-on: windows-latest
     needs: build
     steps:
